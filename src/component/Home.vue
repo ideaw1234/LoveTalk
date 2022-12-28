@@ -35,7 +35,7 @@
                     <div class="relative px-6 lg:px-8">
                         <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
                             <div>
-                                <textarea v-model="Text" class="inline-block resize-none form-control max-sm:w-[100%] max-md:w-[25%] w-[50%] px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none " id="exampleFormControlTextarea1" rows="7" placeholder="Your message"></textarea>
+                                <textarea v-model="Text2" class="inline-block resize-none form-control max-sm:w-[100%] max-md:w-[25%] w-[50%] px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none " id="exampleFormControlTextarea1" rows="7" placeholder="Your message"></textarea>
                                 <img v-if="showImage" class="inline-block max-sm:pt-4 md:w-[35%]  md:mb-[10.8rem]  md:ml-[3rem]  max-sm:w-[80rem]"  :src="imagePath" >
                                 <div
                                     class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
@@ -155,8 +155,15 @@ export default {
     data(){
         return{
             Text:"",
+            Text2:"",
             showImage: false,
         }
+    },
+    watch:{
+      Text2(){
+        this.Text = this.Text2
+      }
+      
     },
     computed: {
     imagePath() {
