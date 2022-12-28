@@ -162,6 +162,7 @@ export default {
     watch:{
       Text2(){
         this.Text = this.Text2
+        console.log(this.Text)
       }
       
     },
@@ -170,22 +171,20 @@ export default {
       console.log(this.Text)
         if (this.Text == 'สวัสดี') {
           this.showImage = true
-        return 'https://www.tripgether.com/wp-content/uploads/2021/08/%E0%B8%88%E0%B8%B8%E0%B8%94%E0%B8%8A%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%AA%E0%B8%B3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%87%E0%B8%86%E0%B9%8C%E0%B9%81%E0%B8%AA%E0%B8%99%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%9901.jpg'
+        return 'https://www.tripgether.com/wp-content/uploads/2021/08/5.jpg'
         }if (this.Text == 'วิวสวยจัง'){
           this.showImage = true
           return "https://s359.thaibuffer.com/pagebuilder/0da1a80c-061d-4af4-87b2-bd4b993d46b4.jpg"
         }else {
           this.showImage = false
         }
-        if(this.Text == ''){
-          this.showImage = false
-        }
         
     }
-    
     },
+
     
 }
-</script>
+</script> 
+
 <style>
 </style>

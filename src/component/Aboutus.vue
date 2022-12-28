@@ -36,12 +36,12 @@
                             <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
                                 <div class="text-center border bg-white rounded-lg">
                                     <h1 class="text-2xl font-bold pb-2 pt-4  ">AboutUs</h1>
-                                        <div class="py-2 text-2xl">
+                                        <!-- <div class="py-2 text-2xl">
                                         <p class="inline-flex pb-2">ชื่อ : นายพีรัชชัย ใจประสงค์</p>
                                         &nbsp;
                                         <p class="inline">ชื่อเล่น : เดียว</p>
                                         <p>ศึกษาอยู่ที่โรงเรียนสวรรค์อนันต์วิทยา ชั้นมัธยมศึกษาปีที่ 4</p>
-                                        </div>
+                                        </div> -->
                                     <div
                                         class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
                                         <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
