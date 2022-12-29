@@ -35,8 +35,9 @@
 						<div class="relative px-6 lg:px-8">
 							<div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
 								<div>
-									<textarea v-model="Text2" class="inline-block resize-none form-control max-sm:w-[100%] max-md:w-[25%] w-[50%] px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none " id="exampleFormControlTextarea1" rows="7" placeholder="Your message"></textarea>
-									<img v-if="showImage" class="inline-block max-sm:pt-4 md:w-[35%]  md:mb-[10.8rem]  md:ml-[3rem]  max-sm:w-[80rem]"  :src="imagePath" >
+									<textarea v-model="Text2" class="h-[80%] inline-block resize-none form-control max-sm:w-[100%] max-md:w-[25%] w-[50%] px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none " rows="7" placeholder="Your message"></textarea>
+										<img v-if="showImage" class="inline-block max-sm:pt-4 md:w-[38%]  md:mb-[10.8rem]  md:ml-[3rem]  max-sm:w-[80rem] max-w-[100%] border border-solid border-gray-300 rounded"  :src="imagePath" >
+									
 									<div
 										class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
 										<svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
@@ -60,7 +61,7 @@
 			</div>
 		</div>
 		<footer class="text-center text-white fixed bottom-0 w-[100%]" >
-			<div class=" pt-9">
+			<!-- <div class=" pt-9">
 			  <div class="flex justify-center mb-3 pl-8">
 				<a href="#!" class="mr-9 text-gray-800">
 				  <svg
@@ -115,7 +116,7 @@
 				  </svg>
 				</a>
 			  </div>
-			</div>
+			</div> -->
 			<div class="text-center text-gray-700 p-4">
 			  © 2022 Copyright:
 			  <a class="text-gray-800" href="https://tailwind-elements.com/">Tailwind Elements</a>
@@ -123,34 +124,8 @@
 		</footer>
 	</body>
 	</template>
-	
-	<!-- <script setup>
-	import { ref } from "@vue/reactivity";
-	import { computed, onMounted } from "@vue/runtime-core";
-	
-	const Text = ref("")
-	
-	setInterval(()=>{
-		console.log(Text.value)
-		const imagePath = computed(()=>{
-		if (Text.value == 'สวัสดี') {
-		  return '../assets/img/test.png';
-		} else {
-		  return '/path/to/type2.jpg';
-		}
-	  }
-	)
-	},100000)
-	const imagePath = computed(()=>{
-		if (Text.value == 'สวัสดี') {
-		  return '../assets/img/test.png';
-		} else {
-		  return '/path/to/type2.jpg';
-		}
-	  }
-	)
-	</script> -->
-	<script>
+
+<script >
 	export default {
 		data(){
 			return{
@@ -166,25 +141,44 @@
 		  }
 		  
 		},
+		
 		computed: {
-		imagePath() {
-		  console.log(this.Text)
-			if (this.Text == 'สวัสดี') {
-			  this.showImage = true
-			return 'https://www.tripgether.com/wp-content/uploads/2021/08/5.jpg'
-			}if (this.Text == 'วิวสวยจัง'){
-			  this.showImage = true
-			  return "https://s359.thaibuffer.com/pagebuilder/0da1a80c-061d-4af4-87b2-bd4b993d46b4.jpg"
-			}else {
-			  this.showImage = false
+				imagePath() {
+				console.log(this.Text)
+					if (this.Text == 'ขอบคุณ') {
+					console.log("สวัสดีจ้า")
+					this.showImage = true
+					return 'https://scontent.fphs4-1.fna.fbcdn.net/v/t1.15752-9/322681541_834252147652697_2481671769556368614_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHV9POH45-5IZfo15x6L_GEhHTUcZd7koKEdNRxl3uSgh0qBCSXg3PAAZQOV84AO3UxMtNmpfEgkmdelLzhyY_Z&_nc_ohc=kkEGIibxbukAX_5fiII&tn=-QhFyLCPR1f3Uokj&_nc_ht=scontent.fphs4-1.fna&oh=03_AdStMQlJGMOaXXTyLYWAfGPBPFvNILAq7voCiyFkAGFrRw&oe=63D3D931'
+					}if (this.Text == 'ขอโทษ'){
+					this.showImage = true
+					return "https://scontent.fphs4-1.fna.fbcdn.net/v/t1.15752-9/322088595_706186647878220_874891315321341332_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeG_xigaJ429M-SkNEQHXhPonREz4yKeU-OdETPjIp5T44fdEhKK07zafSx70rMWH5WJUhobEa4bCNkKdukHuoDu&_nc_ohc=Fob1KnpBXqUAX8Go8Od&_nc_ht=scontent.fphs4-1.fna&oh=03_AdQMzyVAd5sKvi7il7ODboupIzdYWMTPr80UqOfxgIl7BQ&oe=63D3D973"
+					}if (this.Text == 'โชคดี'){
+					this.showImage = true
+					return "https://scontent.fphs4-1.fna.fbcdn.net/v/t1.15752-9/322265271_548155043617892_227652271561849148_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFubtXXNjTLil5kAWAPBddc8oBWvsGH__7ygFa-wYf__qBOI_FFFU2eN_RAprHFNnUqby7Ju7z6HKmBA2HX-XRN&_nc_ohc=dZAdSWvpNLEAX9khKJc&tn=-QhFyLCPR1f3Uokj&_nc_ht=scontent.fphs4-1.fna&oh=03_AdS8PjLqts8DQXioY9-IuWpJXRFJhwWt8-tmB28zh096nQ&oe=63D46A81"}
+					if (this.Text == 'เสียใจ'){
+					this.showImage = true
+					return "https://scontent.fphs4-1.fna.fbcdn.net/v/t1.15752-9/321832224_544973504183013_5600746930209307657_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEBkZl_s9t2mebtzzA-LBQPl7dTonZiWeaXt1OidmJZ5jHfibt3hebryX93lX8S_97i9It6t-NHJ0_oCOai1dxv&_nc_ohc=2srhf3YPVRoAX_aN37y&_nc_ht=scontent.fphs4-1.fna&oh=03_AdTFUff41-oj4eoTyT9FyLmFOC8oPjMW_P-OEt54MQ1vvA&oe=63D448B4"
+			        }if (this.Text == 'ชอบ'){
+					this.showImage = true
+					return "https://scontent.fphs4-1.fna.fbcdn.net/v/t1.15752-9/321838357_489254966664402_6367907172211702309_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFTrjCyA09azze2zafbMfyZSNAX3B1cuh1I0BfcHVy6HftJYbZne7RAiImc7jlew7qNeE_zV6qSA4hNrwnyr5zO&_nc_ohc=cSFy7U2mA6sAX_ScISk&tn=-QhFyLCPR1f3Uokj&_nc_ht=scontent.fphs4-1.fna&oh=03_AdS4ev8wfi_XboavQTlS4pjHt54D-c1vJ7rEJcOZWJOl7w&oe=63D4AAED"
+					}if (this.Text == 'รัก'){
+					this.showImage = true
+					return "https://scontent.fphs4-1.fna.fbcdn.net/v/t1.15752-9/321713423_1500943507060855_654541215463646782_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGvYSym8SYD4L2aSh2mq1ItE89x2Elm3AUTz3HYSWbcBUBb4BRRhbYZTTE6ZsdR0k98ZZGwJxrsOtodPBwQ9CbT&_nc_ohc=Oxarh8vg0aEAX8WfCEP&_nc_ht=scontent.fphs4-1.fna&oh=03_AdQoNwX2r1oQHNMy9BsYkQErRwKbmOAzyZAvCSExZQxD3A&oe=63D48116"
+					}if (this.Text == 'ไม่สบาย'){
+					this.showImage = true
+					return "https://scontent.fphs4-1.fna.fbcdn.net/v/t1.15752-9/322163125_1686408835111299_6215815083197480305_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFDjQrvbILzdZReHrr4lD28LiAuKTcwpX8uIC4pNzClf7a1L2OAZh8Wg_PdJ5MvnUg5o-oBCYEmYorYPmCYO5g2&_nc_ohc=eymWr8UzF_4AX_cx1KG&_nc_oc=AQlGZS51Wog9-gYTZpIoYnCi3cxVQzZE8sILw-JtE4N67mtVayUewhLWeTb9ctS4a_cOR0AkH80ueTWbjcxSlTvP&tn=-QhFyLCPR1f3Uokj&_nc_ht=scontent.fphs4-1.fna&oh=03_AdTEV6vOdziAtMG0mth8pD33OQdfinapBLA1aRFP9q_a1Q&oe=63D47E85"
+					}if (this.Text == 'หิว'){
+					this.showImage = true
+					return "https://scontent.fphs4-1.fna.fbcdn.net/v/t1.15752-9/322306930_678235804013985_166142893976321405_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFQgERPcwo_Xv_dNZwuMNomXfWdzxt-Ntxd9Z3PG3423FoE-q6gi7EUKHABs_JvozGCWUtAlIljHHBSjeEGeEaK&_nc_ohc=UoCgEvojV_UAX_HFE_P&_nc_ht=scontent.fphs4-1.fna&oh=03_AdRzz_MGkHEsnIGedHkXeEWrw61TDRGGRn0SF81fiF7dNg&oe=63D4ADBD"
+					}
+					else {
+					this.showImage = false
 			}
 			
 		}
+
 		},
 	
 		
 	}
 	</script> 
-	
-	<style>
-	</style>
